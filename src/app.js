@@ -50,7 +50,7 @@ app.get('/weather',(req,res)=> {
                           err
                       })
                   }
-                  forecast(location,(err,{ temperature ,location ,description}={})=> {
+                  forecast(location,(err,{ temperature ,location ,description,feel,precip}={})=> {
                       if(err){
                           return res.send({
                              err
@@ -59,7 +59,9 @@ app.get('/weather',(req,res)=> {
                     res.send({
                        description:description,
                        temperature: temperature,
-                       location:location
+                       location:location,
+                       feel:feel,
+                       precip:precip
 
                     })
                   })

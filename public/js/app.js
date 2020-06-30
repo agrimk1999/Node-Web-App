@@ -18,7 +18,8 @@ form.addEventListener('submit', (event)=> {
               return messageOne.textContent=data.err;
            }
     
-          messageOne.textContent="It is " + data.temperature + " degrees in " + data.location + ". The weather is " + data.description;
+          messageOne.textContent="It is " + data.temperature + " degrees in " + data.location + ". The weather is " + data.description 
+          + ". It feels like " + data.feel + ". The probability of precipitation is " + data.precip;
         })
     });
 })

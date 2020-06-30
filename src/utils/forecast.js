@@ -20,7 +20,9 @@ const forecast=(location,callback)=> {
             callback(undefined,{
                 location:location,
                 description :  body.current.weather_descriptions[0],
-                temperature: body.current.temperature
+                temperature: body.current.temperature,
+                feel : body.current.feelslike,
+                precip: body.current.precip
             });
         }
     })
