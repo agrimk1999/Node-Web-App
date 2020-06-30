@@ -11,7 +11,7 @@ const messageTwo=document.querySelector("#messageTwo");
 form.addEventListener('submit', (event)=> {
     event.preventDefault();
     messageOne.textContent='Loading...';
-    fetch('http://localhost:3000/weather/?address=' + search.value).then((res)=>{
+    fetch('/weather/?address=' + search.value).then((res)=>{
         res.json().then((data)=>{
            if(data.err)
            {
